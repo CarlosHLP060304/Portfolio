@@ -22,45 +22,76 @@
         <nav>
             <ul class="cabecalho_lista d-flex g30 list-none">
                 <li><a href="#sobre_mim"
-                        class="cabecalho_lista_item_ancora link-none">Sobre
+                        class="cabecalho_lista_item_ancora text-decoration-none">Sobre
                         mim</a></li>
                 <li><a href="#tecnologias"
-                        class="cabecalho_lista_item_ancora link-none ">Tecnologias</a>
+                        class="cabecalho_lista_item_ancora text-decoration-none">Tecnologias</a>
                 </li>
                 <li><a href="#projetos"
-                        class="cabecalho_lista_item_ancora link-none">Projetos</a>
+                        class="cabecalho_lista_item_ancora text-decoration-none">Projetos</a>
                 </li>
                 <li><a href="#contato"
-                        class="cabecalho_lista_item_ancora link-none">Entre em
+                        class="cabecalho_lista_item_ancora text-decoration-none">Entre em
                         contato</a></li>
             </ul>
         </nav>
     </header>
     
     
-    <main class="principal p-3">
-        <section class="principal_sobre_mim" id="principal_sobre_mim">
+    <main class="principal">
+        <section class="principal_sobre_mim p-4" id="principal_sobre_mim">
             <h2 class="text-center text-primary">Sobre mim</h2>
-            <img src="./img/carlos.jpeg"
-                alt="imagem Carlos Henrique Lins Ponchirolli"
-                class="principal_sobre_mim_imagem_Carlos">
+            <div class="d-flex justify-content-center p-4">
+                <img src="./img/carlos.jpeg"
+                    alt="imagem Carlos Henrique Lins Ponchirolli"
+                    class="principal_sobre_mim_imagem_Carlos">
+            </div>
             <p> <strong>Sou estudante do 4° semestre de Sistemas de Informação
                     na FIAP,
                     com conhecimentos em:</strong>
             </p>
             <section class="tecnologias" id="tecnologias"></section>
-            <p><strong>
-                E também sou interessado em novos desafios e diferentes tipos de tecnologia.
-            </strong></p>
+          
         </section>
-        <section class="projetos" id="projetos">
-            <h2>Projetos</h2>
+        <section class="projetos p-4" id="projetos">
+            <h2 class="text-center text-primary">Projetos</h2>
+            <div class="projetos-x">
+                <div class="projeto">
+                    <video src="./img/buscador_cep_java.mp4" controls class="video-projeto"></video>
+                    <p>Baseado em um desafio do #Alura, fiz um programa que busca por dados de um determinado CEP utilizando a API ViaCEP e devolva os resultados dessa pesquisa para o usuário tanto no formato JSON quanto em uma interface gráfica.</p>
+                </div>
+                <div class="projeto">
+                    <video src="" class="video-projeto"></video>
+                    <p></p>
+                </div>
+                <div class="projeto">
+                    <video src="" class="video-projeto"></video>
+                    <p></p>
+                </div>
+            </div>
+
+            </div>
+            <div class="projetos-x">
+                <div class="projeto">
+                    <video src="" class="video-projeto"></video>
+                    <p></p>
+                </div>
+                <div class="projeto">
+                    <video src="" class="video-projeto"></video>
+                    <p></p>
+                </div>
+                <div class="projeto">
+                    <video src="" class="video-projeto"></video>
+                    <p></p>
+                </div>
+            </div>
+            <p class="text-center"><a href="https://github.com/CarlosHLP060304" class="text-white bold fw-bold" target="_blank">Ver mais</a></p>
         </section>
     </main>
 
 
     <footer class="contato" id="contato">
-        <h2>Entre em contato comigo!!!</h2>
+        <h2 class="text-center text-primary">Entre em contato comigo!!!</h2>
         <div class="d-flex justify-content-center g30">
             <div class="d-flex flex-column">
                 <img src="./img/icons8-linkedin-48.png" alt="imagem Linkedin"
