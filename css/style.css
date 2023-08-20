@@ -14,7 +14,7 @@ html{
 }
 .cabecalho-scroll{
     position: fixed;
-    background-image: none;
+    box-shadow: 5px 10px 15px rgb(106, 9, 197);
 }
 
 .menu-sanduiche{
