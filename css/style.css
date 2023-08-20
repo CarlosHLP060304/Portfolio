@@ -5,11 +5,15 @@
 html{
     font-size: 62,5%;
 }
+
 .cabecalho,.projetos{
     background-image: url(../img/imagem_fundo_cabecalho.avif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 2.5%;
+}
+.cabecalho-scroll{
+    position: fixed;
 }
 .menu-sanduiche{
     display: none;
@@ -24,7 +28,6 @@ html{
     font-weight: var(--hover-weight);
 
 }
-
 .principal_sobre_mim{
     color: #FFF;
     background-image: url(../img/fundo-principal.jpg); 
@@ -110,8 +113,16 @@ html{
     .cabecalho_lista{
         flex-direction: column;
     }
-    
+    .navegacao-desativada{
+        display: none;
+    }
     .menu-sanduiche{
         display: inline;
+    }
+
+    @media(max-width:400px){
+        .cabecalho-inicio{
+            flex-direction: column;
+        }
     }
 }

@@ -1,14 +1,24 @@
 const tecnologias  = document.querySelector("#tecnologias");
-const navegacao_cabecalho= document.querySelector("#cabecalho-navegacao")
+const navegacao_cabecalho= document.querySelector("#cabecalho-navegacao");
+const cabecalho = document.querySelector("#cabecalho");
 let imagem = null;
 let paragrafo = null;
 contador = 0;
 
-function criaTecnologia(caminho,conteudo) {
+
+function criaTecnologia(caminho,alt,conteudo) {
     imagem.src = caminho;
+    imagem.alt = alt;
     paragrafo.textContent = conteudo;
 }
-
+document.addEventListener('scroll',ativaBackgroundCabecalho);
+function ativaBackgroundCabecalho(){
+    if(scrollY == 0){
+        cabecalho.classList.remove("cabecalho-scroll");
+    }else{
+        cabecalho.classList.add("cabecalho-scroll");
+    }
+}
 function preencheDivTecnologias() {
     let imagens = [
         "./img/html5.jpg",
@@ -19,6 +29,16 @@ function preencheDivTecnologias() {
         "./img/sql.jpg",
         "./img/git.png",
         "./img/github.jpeg"
+    ];
+    let alt = [
+        "logo html5",
+        "logo css3",
+        "logo javascript",
+        "logo bootstrap",
+        "logo java",
+        "logo sql",
+        "logo git",
+        "logo github"
     ];
     let descricoes = [
         "Linguagem de marcação usada para criar e estruturar conteúdo na web, usando elementos e tags para definir a organização e apresentação de texto, imagens, links e outros elementos em páginas da internet.",
@@ -35,7 +55,7 @@ function preencheDivTecnologias() {
         paragrafo = document.createElement("p");
         div2 = document.createElement("div");
         imagem.classList.add("imagem-tecnologias");
-        criaTecnologia(imagens[i],descricoes[i]);
+        criaTecnologia(imagens[i],alt[i],descricoes[i]);
         div2.appendChild(imagem);
         div2.appendChild(paragrafo);
         div2.classList.add("tecnologia")
@@ -54,7 +74,8 @@ function preencheDivTecnologias() {
     }
 }
 document.getElementById("menu-sanduiche").addEventListener('click',function(e){
-    navegacao_cabecalho.classList.toggle("d-none");
+    navegacao_cabecalho.classList.toggle("navegacao-desativada");
     console.log("acionou");
 });
 preencheDivTecnologias();
+ativaBackgroundCabecalho();
