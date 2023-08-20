@@ -1,13 +1,10 @@
 const tecnologias  = document.querySelector("#tecnologias");
-const projetos = document.querySelector("#projetos") 
+const navegacao_cabecalho= document.querySelector("#cabecalho-navegacao")
 let imagem = null;
 let paragrafo = null;
 contador = 0;
+
 function criaTecnologia(caminho,conteudo) {
-    imagem.src = caminho;
-    paragrafo.textContent = conteudo;
-}
-function criaProjeto(caminho,conteudo) {
     imagem.src = caminho;
     paragrafo.textContent = conteudo;
 }
@@ -56,5 +53,8 @@ function preencheDivTecnologias() {
         contador++;
     }
 }
-
+document.getElementById("menu-sanduiche").addEventListener('click',function(e){
+    navegacao_cabecalho.classList.toggle("d-none");
+    console.log("acionou");
+});
 preencheDivTecnologias();

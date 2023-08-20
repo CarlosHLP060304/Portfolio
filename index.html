@@ -17,9 +17,12 @@
 
 <body>
     
-    <header class="cabecalho d-flex align-items-center p-4">
-        <h1 class="text-primary">Portfólio Carlos Henrique Lins Ponchirolli</h1>
-        <nav>
+    <header class="cabecalho d-flex align-items-center">
+        <div class="cabecalho-inicio">
+            <h1 class="text-primary">Portfólio Carlos Henrique Lins Ponchirolli</h1>
+            <img src="./img/menu.png" alt="menu-sanduiche" class="menu-sanduiche" id="menu-sanduiche">
+        </div>
+        <nav class="cabecalho-navegacao cabecalho-nav-ativada" id="cabecalho-navegacao">
             <ul class="cabecalho_lista d-flex g30 list-none">
                 <li><a href="#sobre_mim"
                         class="cabecalho_lista_item_ancora text-decoration-none">Sobre
@@ -46,42 +49,49 @@
                     alt="imagem Carlos Henrique Lins Ponchirolli"
                     class="principal_sobre_mim_imagem_Carlos">
             </div>
-            <p> <strong>Sou estudante do 4° semestre de Sistemas de Informação
+            <p> <strong>Sou um estudante do 4° semestre de Sistemas de Informação
                     na FIAP,
                     com conhecimentos em:</strong>
             </p>
             <section class="tecnologias" id="tecnologias"></section>
           
         </section>
-        <section class="projetos p-4" id="projetos">
+        <section class="projetos" id="projetos">
             <h2 class="text-center text-primary">Projetos</h2>
             <div class="projetos-x">
                 <div class="projeto">
-                    <video src="./img/buscador_cep_java.mp4" controls class="video-projeto"></video>
-                    <p>Baseado em um desafio do #Alura, fiz um programa que busca por dados de um determinado CEP utilizando a API ViaCEP e devolva os resultados dessa pesquisa para o usuário tanto no formato JSON quanto em uma interface gráfica.</p>
+                    <h3>Buscador CEP</h3>
+                    <video src="./videos/buscador_cep_java.mp4" controls class="video-projeto"></video>
+                    <!-- <p>Baseado em um desafio do #Alura, fiz um programa que busca por dados de um determinado CEP utilizando a API ViaCEP e devolva os resultados dessa pesquisa para o usuário tanto no formato JSON quanto em uma interface gráfica.</p> -->
                 </div>
                 <div class="projeto">
-                    <video src="" class="video-projeto"></video>
+                    <h3>Sistema ONG Alimentando Esperanças</h3>
+                    <video src="./videos/sistema_ong.mp4" controls class="video-projeto"></video>
                     <p></p>
                 </div>
-                <div class="projeto">
-                    <video src="" class="video-projeto"></video>
-                    <p></p>
-                </div>
-            </div>
-
             </div>
             <div class="projetos-x">
                 <div class="projeto">
-                    <video src="" class="video-projeto"></video>
+                    <h3>Simulação Atendimento Feedback</h3>
+                    <video src="./videos/simulacao_atendimento_feedback.mp4" controls class="video-projeto"></video>
+                    <p></p>
+                </div>
+                
+                <div class="projeto">
+                    <h3>Agendamento de Consultas</h3>
+                    <video src="./videos/agendamento_medico.mp4" controls class="video-projeto"></video>
+                    <p></p>
+                </div>
+            </div>
+            <div class="projetos-x">
+                <div class="projeto">
+                    <h3>Simulação Competição entre Equipes</h3>
+                    <video src="./videos/competicao_equipes.mp4" controls class="video-projeto"></video>
                     <p></p>
                 </div>
                 <div class="projeto">
-                    <video src="" class="video-projeto"></video>
-                    <p></p>
-                </div>
-                <div class="projeto">
-                    <video src="" class="video-projeto"></video>
+                    <h3>Gerador de Senhas</h3>
+                    <video src="./videos/gerador_senha.mp4"  controls class="video-projeto"></video>
                     <p></p>
                 </div>
             </div>
@@ -92,22 +102,19 @@
 
     <footer class="contato" id="contato">
         <h2 class="text-center text-primary">Entre em contato comigo!!!</h2>
-        <div class="d-flex justify-content-center g30">
+        <div class="d-flex justify-content-center g50">
             <div class="d-flex flex-column">
-                <img src="./img/icons8-linkedin-48.png" alt="imagem Linkedin"
-                    height="48" width="48">
+                <img src="./img/icons8-linkedin-48.png" alt="imagem Linkedin">
                 <a href="https://www.linkedin.com/in/carlos-ponchirolli/"
                     target="_blank">Linkedin</a>
             </div>
             <div class="d-flex flex-column">
-                <img src="./img/envelope-regular.svg" alt="imagem Email"
-                    height="48" width="48">
+                <img src="./img/envelope-regular.svg" alt="imagem Email">
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZfSfVNFJszJnzpjPmFnTqgCGtqNZRSgMLczzllTsfKhHmCvsRMPNKtttpQBhTnbcFsNHL"
                     target="_blank">Email</a>
             </div>
             <div class="d-flex flex-column">
-                <img src="./img/github.svg" alt="imagem Github" height="48"
-                    width="48">
+                <img src="./img/github.svg" alt="imagem Github">
                 <a href="http://" target="_blank">Github</a>
             </div>
         </div>

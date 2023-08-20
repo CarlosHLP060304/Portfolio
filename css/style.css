@@ -9,8 +9,11 @@ html{
     background-image: url(../img/imagem_fundo_cabecalho.avif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    padding: 2.5%;
 }
-
+.menu-sanduiche{
+    display: none;
+}
 .cabecalho_lista_item_ancora{
     color: #FFF;
     font-size: 1.5rem;
@@ -61,7 +64,7 @@ html{
     width: 200px;
 }
 .projeto{
-    max-width: 400px;
+    max-width: 35rem;
     padding: 1%;
 }
 .video-projeto{
@@ -70,10 +73,45 @@ html{
 .contato{
     background-image: url("../img/fundo-principal.jpg");
 }
+.contato img{
+    width: 48px;
+    height: 48px;
+}
+.contato a:hover{
+    color: var(--hover-color);
+}
 .list-none{
     list-style: none;
 }
 
 .g30{
     gap: 30px;
+}
+.g50{
+    gap: 50px;
+}
+
+@media(max-width:700px){
+    .cabecalho{
+        flex-direction: column;
+        padding: 0 0 15% 0;
+    }
+    .cabecalho-inicio{
+        display: flex;
+        background-image: url(../img/fundo-principal.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 2.5%;
+        align-items: center;
+    }
+    .cabecalho{
+        padding: 0;
+    }
+    .cabecalho_lista{
+        flex-direction: column;
+    }
+    
+    .menu-sanduiche{
+        display: inline;
+    }
 }
