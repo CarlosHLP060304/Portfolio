@@ -14,7 +14,9 @@ html{
 }
 .cabecalho-scroll{
     position: fixed;
+    background-image: none;
 }
+
 .menu-sanduiche{
     display: none;
 }
