@@ -66,8 +66,7 @@ html{
 }
 
 .imagem-tecnologias{
-    height: 200px;
-    width: 200px;
+    height: 30vh;
 }
 .projeto{
     max-width: 35rem;
@@ -96,7 +95,14 @@ html{
 .g50{
     gap: 50px;
 }
-
+.link_ver_mais{
+    color: #FFF;
+    font-weight: 500;
+}
+.link_ver_mais:hover{
+    color: var(--hover-color);
+    font-weight: var(--hover-weight);
+}
 @media(max-width:700px){
     .cabecalho{
         flex-direction: column;

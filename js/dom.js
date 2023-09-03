@@ -55,6 +55,7 @@ function preencheDivTecnologias() {
         paragrafo = document.createElement("p");
         div2 = document.createElement("div");
         imagem.classList.add("imagem-tecnologias");
+        imagem.classList.add("img-fluid");
         criaTecnologia(imagens[i],alt[i],descricoes[i]);
         div2.appendChild(imagem);
         div2.appendChild(paragrafo);
