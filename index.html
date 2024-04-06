@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel= "icon" href="img/carlos.jpeg">
+    <link rel="icon" href="img/carlos.jpeg">
     <title>
-       Portifólio Carlos Henrique Lins Ponchirolli
+        Portifólio Carlos Henrique Lins Ponchirolli
     </title>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -15,15 +14,17 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-    
+
     <header class="cabecalho d-flex align-items-center" id="cabecalho">
         <div class="cabecalho-inicio">
-            <h1 class="text-primary">Portfólio Carlos Henrique Lins Ponchirolli</h1>
-            <img src="./img/menu.png" alt="menu-sanduiche" class="menu-sanduiche" id="menu-sanduiche" alt="ícone de menu">
+            <h1 class="text-primary">Portfólio Carlos Henrique Lins Ponchirolli
+            </h1>
+            <img src="./img/menu.png" alt="menu-sanduiche"
+                class="menu-sanduiche" id="menu-sanduiche" alt="ícone de menu">
         </div>
-        <nav class="cabecalho-navegacao navegacao-desativada" id="cabecalho-navegacao">
+        <nav class="cabecalho-navegacao navegacao-desativada"
+            id="cabecalho-navegacao">
             <ul class="cabecalho_lista d-flex g30 list-none">
                 <li><a href="#sobre_mim"
                         class="cabecalho_lista_item_ancora text-decoration-none">Sobre
@@ -35,74 +36,41 @@
                         class="cabecalho_lista_item_ancora text-decoration-none">Projetos</a>
                 </li>
                 <li><a href="#contato"
-                        class="cabecalho_lista_item_ancora text-decoration-none">Entre em
+                        class="cabecalho_lista_item_ancora text-decoration-none">Entre
+                        em
                         contato</a></li>
             </ul>
         </nav>
     </header>
-    
-    
     <main class="principal">
-        <section class="principal_sobre_mim p-4" id="sobre_mim">
+        <section class="principal_sobre_mim p-4 " id="sobre_mim">
             <h2 class="text-center text-primary">Sobre mim</h2>
             <div class="d-flex justify-content-center p-4">
                 <img src="./img/carlos.jpeg"
                     alt="imagem Carlos Henrique Lins Ponchirolli"
                     class="principal_sobre_mim_imagem_Carlos">
             </div>
-            <p> <strong>Sou um estudante do 6° semestre de Sistemas de Informação
+            <p> <strong>Sou um estudante do 6° semestre de Sistemas de
+                    Informação
                     na FIAP,
                     com conhecimentos em:</strong>
             </p>
-            <section class="tecnologias" id="tecnologias">
-                <h2 class="text-center text-primary">Tecnologias</h2>
-            </section>
-          
+
+            
         </section>
-        <section class="projetos" id="projetos">
+        
+        <section class="sessao_tecnologias" id="sessao_tecnologias">
+            <h2 class="text-center text-primary">Tecnologias</h2>
+            <div class="tecnologias d-flex flex-wrap justify-content-around" id="tecnologias"></div>
+        </section>
+        <section class="sessao_projetos d-flex flex-column" id="sessao_projetos">
             <h2 class="text-center text-primary">Projetos</h2>
-            <div class="projetos-x">
-                <div class="projeto">
-                    <h3>Buscador CEP</h3>
-                    <video src="./videos/buscador_cep_java.mp4" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <!-- <p>Baseado em um desafio do #Alura, fiz um programa que busca por dados de um determinado CEP utilizando a API ViaCEP e devolva os resultados dessa pesquisa para o usuário tanto no formato JSON quanto em uma interface gráfica.</p> -->
-                </div>
-                <div class="projeto">
-                    <h3>Sistema ONG Alimentando Esperanças</h3>
-                    <video src="./videos/sistema_ong.mp4" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <p></p>
-                </div>
-            </div>
-            <div class="projetos-x">
-                <div class="projeto">
-                    <h3>Simulação Atendimento Feedback</h3>
-                    <video src="./videos/simulacao_atendimento_feedback.mp4" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <p></p>
-                </div>
-                
-                <div class="projeto">
-                    <h3>Agendamento de Consultas</h3>
-                    <video src="./videos/agendamento_medico.mp4" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <p></p>
-                </div>
-            </div>
-            <div class="projetos-x">
-                <div class="projeto">
-                    <h3>Simulação Competição entre Equipes</h3>
-                    <video src="./videos/competicao_equipes.mp4" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <p></p>
-                </div>
-                <div class="projeto">
-                    <h3>Gerador de Senhas</h3>
-                    <video src="./videos/gerador_senha.mp4"  controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-                    <p></p>
-                </div>
-            </div>
-            <p class="text-center"><a href="https://github.com/CarlosHLP060304" class="link_ver_mais" target="_blank">Ver mais</a></p>
+            <div class="projetos d-flex flex-wrap justify-content-around" id="projetos"></div>
         </section>
+    
     </main>
-
-
+    
+    
     <footer class="contato p-3" id="contato">
         <h2 class="text-center text-primary">Entre em contato comigo!!!</h2>
         <div class="d-flex justify-content-center g50">
@@ -118,16 +86,15 @@
             </div>
             <div class="d-flex flex-column">
                 <img src="./img/github.svg" alt="imagem Github">
-                <a href="https://github.com/CarlosHLP060304" target="_blank">Github</a>
+                <a href="https://github.com/CarlosHLP060304"
+                    target="_blank">Github</a>
             </div>
         </div>
     </footer>
-    
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="./js/dom.js"></script>
-
+    <script src="./js/index.js"></script>
 </body>
 </html>
