@@ -1,20 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --hover-color: yellow;
     --hover-weight: 700;   
 }
+
 html{
     font-size: 62,5%;
+}
+body{
+    color: #FFF;
+}
+
+input{
+    color: black;
+}
+.cabecalho,.sessao_tecnologias,.sessao_projetos,#sobre_mim,footer{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5%;
 }
 
 .cabecalho,.sessao_tecnologias{
     background-image: url(../img/imagem_fundo_cabecalho.avif);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 2.5%;
 }
 
-.sobre_mim{
-    background-color: rgba(0, 0, 0, 0.42);
+.sessao_projetos,#sobre_mim{
+    background-image: url(../img/fundo_verde.jpg);
 }
 
 
@@ -59,6 +75,12 @@ html{
 .video-projeto{
     width: 100%;
 }
+
+.next{
+    width: 5rem;
+    height:5rem;
+}
+
 .contato{
     background-image: url("../img/fundo-principal.jpg");
 }
