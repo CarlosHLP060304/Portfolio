@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    width: 100%;
+    height: 105vh;
+    background-image: url("../img/computador/cachoeira.jpg");
+    background-size: cover;
+    color: #FFF;
+}
+
+.data_horario{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding-bottom: 7rem;
+    padding-left: 2rem;
+}
+
+.horario{
+    font-size: 12rem;
+}
+
+.data{
+    font-size: 4rem;
+}
+
+.fundo-opaco{
+    opacity: 100%;
+}
+
+.principal_sobre_mim_imagem_Carlos{
+    border-radius: 360px;
+    width: 20rem;
+    
+}
+
+.login{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 10% ;
+    align-items: center;
+}
+
+.login button{font-size: 2.5rem;}
