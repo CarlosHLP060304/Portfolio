@@ -98,7 +98,7 @@ function exibeTecnologias(){
 
 
 `
-
+}
 document.querySelectorAll(".tecnologia").forEach(tecnologia => {
     const button = tecnologia.querySelector("button")
     const sub_div = tecnologia.querySelector(".conteudo")
@@ -144,5 +144,3 @@ projetos.innerHTML += `
 
 
 ativaBackgroundCabecalho();
-
-
