@@ -51,8 +51,15 @@ body{
     width: 100%;
     height: 100%;
     flex-direction: column;
+    /* justify-content: center; */
     padding-top: 10% ;
     align-items: center;
 }
+
+/* .login button{
+    margin-top: 5px;
+    width: 10%;
+    padding:5px;
+} */
 
 .login button{font-size: 2.5rem;}
