@@ -70,12 +70,27 @@ let titulos = [
 "Sistema ONG Alimentando Esperanças"
 ]
 
-for (let index = 0; index < src.length; index++) {
-        adicionarTecnologia(index,src[index],alt[index],descricoes[index])
+new Audio("../audio/Alarm03.wav").play()
+
+
+function ativaBackgroundCabecalho(){
+    if(scrollY == 0){
+        cabecalho.classList.remove("cabecalho-scroll");
+    }else{
+        cabecalho.classList.add("cabecalho-scroll");
+    }
 }
 
-for (let index = 0; index < videos.length; index++) {
-    adicionarProjeto(index,titulos[index],videos[index])
+function adicionarTecnologia(id,src,alt,paragrafo){
+    tecnologias_json.push({
+        id,src,alt,paragrafo
+    })
+}
+
+function adicionarProjeto(id,titulo,video){
+    projetos_json.push({
+        id,titulo,video
+    })
 }
 
 function exibeTecnologias(){
@@ -95,52 +110,124 @@ function exibeTecnologias(){
         </div>` 
     ).join("")
     }
-
-
 `
 }
-document.querySelectorAll(".tecnologia").forEach(tecnologia => {
-    const button = tecnologia.querySelector("button")
-    const sub_div = tecnologia.querySelector(".conteudo")
-    button.addEventListener(
-        "click", ()=>{
-            console.log(sub_div.classList.contains("d-none"))
-            if(!sub_div.classList.contains("d-none")){
-                sub_div.classList.add("d-none")
-                button.textContent = "Ver mais" 
-                button.classList.remove("btn-danger")
-                button.classList.add("btn-success")
-                contador = 1
-            }else{
-                sub_div.classList.remove("d-none")
-                button.textContent = "Ver menos"
-                button.classList.remove("btn-success")
-                button.classList.add("btn-danger")
-                contador = 0
-            }  
-           
+
+function exibeProjetos(){
+        projetos.innerHTML = `
+
+        ${
+            projetos_json.map(
+                projeto => `
+                <div class="projeto col-6">
+                    <h3 class="text-light">${projeto.titulo}</h3>
+                    <video src="${projeto.video}" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
+                </div>
+                `
+            ).join("")
         }
+        `
+    
+}
+
+function buscarTecnologia() {
+        busca.addEventListener(
+            "keyup", ()=>{
+                tecnologias.innerHTML = `
+        
+        
+        ${
+            tecnologias_json.filter(tecnologia=> tecnologia.alt.split("logo ")[1].toLowerCase().includes(busca.value.toLowerCase())).map(
+                tecnologia =>  
+                `
+                <div class="tecnologia col-3 d-flex flex-column me-1 mb-2">
+                    <button class="btn btn-success">Ver mais</button>
+                    <img src="${tecnologia.src}" alt="${tecnologia.alt}" class="img-fluid imagem-tecnologias"></img>
+                    <div class="conteudo d-none">
+                        <p>${tecnologia.paragrafo}</p>
+                    </div>
+                </div>` 
+            ).join("")
+            }
+        
+        `
+        exibeDescricao()
+            }
     )
+}
+
+function exibeDescricao(){
+    document.querySelectorAll(".tecnologia").forEach(tecnologia => {
+        const button = tecnologia.querySelector("button")
+        const sub_div = tecnologia.querySelector(".conteudo")
+        button.addEventListener(
+            "click", ()=>{
+                console.log(sub_div.classList.contains("d-none"))
+                if(!sub_div.classList.contains("d-none")){
+                    sub_div.classList.add("d-none")
+                    button.textContent = "Ver mais" 
+                    button.classList.remove("btn-danger")
+                    button.classList.add("btn-success")
+                    contador = 1
+                }else{
+                    sub_div.classList.remove("d-none")
+                    button.textContent = "Ver menos"
+                    button.classList.remove("btn-success")
+                    button.classList.add("btn-danger")
+                    contador = 0
+                }  
+               
+            }
+        )
+    });
+}
+
+document.addEventListener('scroll',ativaBackgroundCabecalho);
+
+
+document.getElementById("menu-sanduiche").addEventListener('click',function(e){
+    navegacao_cabecalho.classList.toggle("navegacao-desativada");
+    console.log("acionou");
 });
 
+for (let index = 0; index < src.length; index++) {
+        adicionarTecnologia(index,src[index],alt[index],descricoes[index])
+}
+
+for (let index = 0; index < videos.length; index++) {
+    adicionarProjeto(index,titulos[index],videos[index])
+}
+
+let contador_tecnologias = 2
 
 
-
-projetos.innerHTML += `
-
-    ${
-        projetos_json.map(
-            projeto => `
-            <div class="projeto col-6">
-                <h3 class="text-light">${projeto.titulo}</h3>
-                <video src="${projeto.video}" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
-            </div>
-            `
-        ).join("")
-    }
-        
-    
-    `
+contador_projetos = 2
 
 
+   
+buscarTecnologia()
 ativaBackgroundCabecalho();
+exibeTecnologias()
+exibeProjetos()
+exibeDescricao()
+
+// document.querySelectorAll(".next").forEach(
+//     btn=>{
+//         console.log(btn.id)
+        
+//         btn.addEventListener("click",()=>{
+//             if(btn.id === "btn_next_tecnologias"){
+//                 contador_tecnologias+=2
+//                 exibeTecnologias()
+//                 console.log(contador_tecnologias)
+//             }
+//             else
+//                 contador_projetos+=2
+//                 exibeProjetos()
+//                 console.log(contador_projetos)
+//         })
+//     } 
+// )
+
+
+
