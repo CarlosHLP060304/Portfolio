@@ -37,7 +37,7 @@ input{
 .cabecalho-scroll{
     position: fixed;
     box-shadow: 5px 10px 15px rgb(106, 9, 197);
-    opacity: 80%;
+    opacity: 70%;
 }
 
 .menu-sanduiche{

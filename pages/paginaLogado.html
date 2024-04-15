@@ -26,13 +26,13 @@
         <nav class="cabecalho-navegacao navegacao-desativada"
             id="cabecalho-navegacao">
             <ul class="cabecalho_lista d-flex g30 list-none">
-                <li><a href="#sobre_mim"
+                <li><a href="#"
                         class="cabecalho_lista_item_ancora text-decoration-none">Sobre
                         mim</a></li>
-                <li><a href="#tecnologias"
+                <li><a href="#sessao_tecnologias"
                         class="cabecalho_lista_item_ancora text-decoration-none">Tecnologias</a>
                 </li>
-                <li><a href="#projetos"
+                <li><a href="#sessao_projetos"
                         class="cabecalho_lista_item_ancora text-decoration-none">Projetos</a>
                 </li>
                 <li><a href="#contato"
@@ -43,29 +43,56 @@
                     <a href="../index.html"
                         class="cabecalho_lista_item_ancora text-decoration-none">
                         <img src="../img/icons8-botão-desligar-48.png" alt="botão de desligar" title="Desligar">
-                    
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="principal">
-        <section class="principal_sobre_mim p-4 " id="sobre_mim">
-            <h2 class="text-center text-primary">Sobre mim</h2>
-            <div class="d-flex justify-content-center p-4">
-                <img src="../img/carlos_novo.jpg"
-                    alt="imagem Carlos Henrique Lins Ponchirolli"
-                    class="principal_sobre_mim_imagem_Carlos">
-            </div>
-            <p> <strong>Sou um estudante do 5° semestre de Sistemas de
-                    Informação
-                    na FIAP,
-                    com conhecimentos em:</strong>
-            </p>
-
-            
-        </section>
         
+        <section class="principal_sobre_mim p-4" id="sobre_mim">
+            <h2 class="sobre-mim-titulo-principal mb-3">Sobre mim</h2>
+            <div class="d-flex gap-3">
+                <div class="d-flex sobre-mim-descricao gap-3">
+                    <img src="../img/carlos_novo.jpg" style="width: 300px;" alt="">
+                    <div>
+                        <h3>Descrição</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam assumenda expedita veniam nam ipsam beatae officia itaque, commodi consequatur accusamus quo aspernatur dolorum mollitia perferendis eligendi, nesciunt in natus repudiandae.</p>
+                        <a href="./curriculo/curriculo.docx" download><button class="btn btn-success">Baixar CV</button></a>
+                    </div>
+                </div>
+                <nav class="d-flex justify-content-start flex-column"  id="contato">
+                    <h3>Entre em contato comigo!!!</h3>
+                    <ul class="d-flex gap-5 list-none flex-wrap">
+                      <a href="https://github.com/" class="text-decoration-none" target="_blank">
+                        <li class="github">
+                            <span>GitHub</span>
+                            <img src="../img/github.svg" alt="" class="d-block">
+                          </li>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                        <li class="linkedin">
+                            <span>Linkedin</span>
+                            <img src="../img/icons8-linkedin-48.png" alt="" class="d-block" target="_blank">
+                          </li>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                        <li class="email">
+                            <span>Whatsapp</span>
+                            <img src="./img/whatsapp.svg" alt="" class="d-block" target="_blank">
+                          </li>
+                        </a>
+                        <a href="" class="text-decoration-none">
+                        <li class="email">
+                            <span>Email</span>
+                            <img src="../img/envelope-regular.svg" alt="" class="d-block" target="_blank">
+                          </li>
+                        </a>
+                      </ul>
+                </nav>
+              </div>
+            </section> 
+            
         <section class="sessao_tecnologias " id="sessao_tecnologias">
             <h2 class="text-center text-primary">Tecnologias</h2>
             <p class="text-center pt-2 pb-0">
@@ -79,6 +106,9 @@
         <section class="sessao_projetos d-flex flex-column" id="sessao_projetos">
             <h2 class="text-center text-primary">Projetos</h2>
             <div class="projetos d-flex flex-wrap justify-content-around align-items-center" id="projetos"></div>
+            <div class="d-flex justify-content-center">
+                <a href="https://github.com/CarlosHLP060304" class="btn btn-info">Ver mais</a>
+            </div>
         </section>
     
     </main>
@@ -90,17 +120,17 @@
             <div class="d-flex flex-column">
                 <img src="../img/icons8-linkedin-48.png" alt="imagem Linkedin">
                 <a href="https://www.linkedin.com/in/carlos-ponchirolli/"
-                    target="_blank">Linkedin</a>
+                    target="_blank" class="text-decoration-none">Linkedin</a>
             </div>
             <div class="d-flex flex-column">
                 <img src="../img/envelope-regular.svg" alt="imagem Email">
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZfSfVNFJszJnzpjPmFnTqgCGtqNZRSgMLczzllTsfKhHmCvsRMPNKtttpQBhTnbcFsNHL"
-                    target="_blank">Email</a>
+                    target="_blank" class="text-decoration-none">Email</a>
             </div>
             <div class="d-flex flex-column">
                 <img src="../img/github.svg" alt="imagem Github">
                 <a href="https://github.com/CarlosHLP060304"
-                    target="_blank">Github</a>
+                    target="_blank" class="text-decoration-none">Github</a>
             </div>
         </div>
     </footer>
@@ -108,6 +138,6 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/index.js" type="module"></script>
 </body>
 </html>
