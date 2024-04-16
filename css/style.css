@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.slide-top{
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 :root{
     --hover-color: yellow;
@@ -24,6 +28,12 @@ input{
     background-size: cover;
     padding: 2.5%;
 }
+
+img{
+    animation-name: slidein;
+    animation-duration: 1000ms;
+}
+
 
 .cabecalho,.sessao_tecnologias{
     background-image: url(../img/imagem_fundo_cabecalho.avif);
@@ -143,6 +153,17 @@ input{
     }
 
 
-
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 100%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      
 
 

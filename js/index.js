@@ -9,25 +9,6 @@ let projetos_json = []
 const busca = document.querySelector("#busca")
 
 
-
-let videos = [
-"videos/agendamento_medico.mp4",
-"videos/buscador_cep_java.mp4",
-"videos/competicao_equipes.mp4",
-"videos/gerador_senha.mp4",
-"videos/simulacao_atendimento_feedback.mp4",
-"videos/sistema_ong.mp4"
-]
-
-let titulos = [
-"Agendamento de Consultas",
-"Buscador CEP",
-"Sistema Competição entre Equipes",
-"Gerador de Senha",
-"Simulacao Atendimento Feedback",
-"Sistema ONG Alimentando Esperanças"
-]
-
 new Audio("../audio/Alarm03.wav").play()
 
 
@@ -161,13 +142,12 @@ for (let index = 0; index < array_videos.length; index++) {
 }
 
 
-
-   
 buscarTecnologia()
 ativaBackgroundCabecalho();
 exibeTecnologias()
 exibeProjetos()
 exibeDescricao()
+
 
 // document.querySelectorAll(".next").forEach(
 //     btn=>{

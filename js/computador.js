@@ -27,7 +27,7 @@ document.body.addEventListener("click",()=>{
     </div>
     `
     document.querySelector("button").addEventListener("click",()=>{
-          window.location.href = "../pages/paginaLogado.html"
+          window.location.href = "../pages/loading.html"
 })
 
 })
