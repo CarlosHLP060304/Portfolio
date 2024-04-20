@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/style.css">
  </head>
  <body>
-    <header class="cabecalho d-flex align-items-center" id="cabecalho">
+    <header class="cabecalho d-flex align-items-center justify-content-between" id="cabecalho">
         <div class="cabecalho-inicio">
             <h1 class="text-primary">Portfólio Carlos Henrique Lins Ponchirolli
             </h1>
@@ -24,7 +24,7 @@
         </div>
         <nav class="cabecalho-navegacao navegacao-desativada"
             id="cabecalho-navegacao">
-            <ul class="cabecalho_lista d-flex g30 list-none">
+            <ul class="cabecalho_lista d-flex g30 list-none align-items-center">
                 <li><a href="#"
                         class="cabecalho_lista_item_ancora text-decoration-none">Sobre
                         mim</a></li>
@@ -47,37 +47,39 @@
         
         <section class="principal_sobre_mim p-4" id="sobre_mim">
             <h2 class="sobre-mim-titulo-principal mb-3">Sobre mim</h2>
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 div-aux">
+                <img src="../img/carlos_novo.jpg" style="width: 300px;" alt="" >
                 <div class="d-flex sobre-mim-descricao gap-3">
-                    <img src="../img/carlos_novo.jpg" style="width: 300px;" alt="" >
                     <div>
                         <h3>Descrição</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam assumenda expedita veniam nam ipsam beatae officia itaque, commodi consequatur accusamus quo aspernatur dolorum mollitia perferendis eligendi, nesciunt in natus repudiandae.</p>
-                        <a href="./curriculo/curriculo.docx" download><button class="btn btn-success">Baixar CV</button></a>
-                        <nav class="d-flex justify-content-start"  id="contato">
-                            <ul class="d-flex gap-5 list-none flex-wrap" style="padding-left: 0;margin-top: 40px;">
-                              <a href="https://github.com/" class="text-decoration-none" target="_blank">
+                        <p>
+                            Me chamo Carlos Henrique Lins Ponchirolli e estou no 5º semestre do curso de Sistemas da Informação. Adoro aprender e encarar desafios com entusiasmo. Sempre que algo novo surge, mergulho de cabeça para absorver o máximo de conhecimento possível. Tenho habilidades sólidas para trabalhar em equipe, evitando conflitos e promovendo um ambiente colaborativo. Consigo manter uma atitude positiva mesmo diante das situações mais desafiadoras. Estou constantemente buscando aprimorar minhas habilidades e conhecimentos nessa área fascinante.
+                        </p>
+                        <a href="../Estágio em Desenvolvimento de Software.pdf" download><button class="btn btn-success">Baixar CV</button></a>
+                        <nav class="d-flex"  id="contato">
+                            <ul class="d-flex gap-5 list-none flex-wrap justify-content-around" style="padding-left: 0;margin-top: 40px;">
+                              <a href="https://github.com/CarlosHLP060304" class="text-decoration-none contato" target="_blank">
                                 <li class="github">
                                     <span>GitHub</span>
-                                    <img src="../img/github.svg" alt="" class="d-block">
+                                    <img src="../img/github.png" alt="github" class="d-block">
                                   </li>
                                 </a>
-                                <a href="" class="text-decoration-none">
+                                <a href="https://www.linkedin.com/in/carlos-ponchirolli/" class="text-decoration-none contato">
                                 <li class="linkedin">
                                     <span>Linkedin</span>
-                                    <img src="../img/icons8-linkedin-48.png" alt="" class="d-block" target="_blank">
+                                    <img src="../img/linkedin.png" alt="linkedin" class="d-block" target="_blank">
                                   </li>
                                 </a>
-                                <a href="" class="text-decoration-none">
+                                <a href="https://wa.me/5511954657283" class="text-decoration-none contato">
                                 <li class="email">
                                     <span>Whatsapp</span>
-                                    <img src="./img/whatsapp.svg" alt="" class="d-block" target="_blank">
+                                    <img src="../img/whatsapp.png" alt="whatsapp" class="d-block" target="_blank">
                                   </li>
                                 </a>
-                                <a href="" class="text-decoration-none">
+                                <a href="mailto:carlosponchirolli655@gmail.com" class="text-decoration-none contato">
                                 <li class="email">
                                     <span>Email</span>
-                                    <img src="../img/envelope-regular.svg" alt="" class="d-block" target="_blank">
+                                    <img src="../img/gmail.png" alt="email" class="d-block" target="_blank">
                                   </li>
                                 </a>
                               </ul>
@@ -94,7 +96,7 @@
                 <label for="busca" >Digite da tecnologia que você está buscando:</label>
             </p>
             <div class="tecnologias d-flex justify-content-center pb-5 flex-wrap">
-                <input type="search" id="busca">
+                <input type="search" id="busca" class="p-1">
             </div>
             <div class="tecnologias d-flex flex-wrap justify-content-around align-items-center" id="tecnologias"></div>
         </section>
