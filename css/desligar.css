@@ -1,0 +1,18 @@
+.desligar::after{
+    content: "...";
+    animation: asterisco 1500ms;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes asterisco {
+    100%{
+        content: "...";
+    }
+    50%{
+        content: "..";
+    }
+    0%{
+        content: ".";
+    }
+}

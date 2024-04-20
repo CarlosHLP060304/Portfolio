@@ -78,22 +78,22 @@ export let array_videos = [
     {
         "id": 0,
         "titulo": "Site para Administrador de Eventos",
-        "video": "videos/agendamento_medico.mp4"
+        "video": "../videos/Site Administrador de Eventos ‐ Feito com o Clipchamp.mp4"
     },
     {
         "id": 1,
         "titulo": "Montador de Currículos",
-        "video": "videos/buscador_cep_java.mp4"
+        "video": "../videos/Projeto Montador de Currículos.mp4"
     },
     {
         "id": 2,
         "titulo": "Gerador de Senha",
-        "video": "videos/gerador_senha.mp4"
+        "video": "../videos/gerador_senha.mp4"
     },
     {
         "id": 3,
-        "titulo": "Sistema ONG Alimentando Esperanças",
-        "video": "videos/sistema_ong.mp4"
+        "titulo": "Buscador de Endereços",
+        "video": "../videos/buscador_cep_java.mp4"
     }
 ]
 

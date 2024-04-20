@@ -3,3 +3,4 @@ function carregamentoDePagina() {
 }
 
 setTimeout(carregamentoDePagina,2000)
+

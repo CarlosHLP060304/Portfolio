@@ -7,10 +7,14 @@ const cabecalho = document.querySelector("#cabecalho");
 let tecnologias_json =  []
 let projetos_json = []
 const busca = document.querySelector("#busca")
+const contato = document.querySelector("#contato")
 
 
 new Audio("../audio/Alarm03.wav").play()
 
+let nomeUsuario = localStorage.getItem("nome") === "" ? "User 1" : localStorage.getItem("nome")   
+
+alert(`Bem vindo(a) ${nomeUsuario}`)
 
 function ativaBackgroundCabecalho(){
     if(scrollY == 0){
@@ -19,10 +23,6 @@ function ativaBackgroundCabecalho(){
         cabecalho.classList.add("cabecalho-scroll");
     }
 }
-
-
-
-
 
 function adicionarTecnologia(id,src,alt,paragrafo){
     tecnologias_json.push({
@@ -64,7 +64,7 @@ function exibeProjetos(){
                 projeto => `
                 <div class="projeto col-6">
                     <h3 class="text-light">${projeto.titulo}</h3>
-                    <video src="${projeto.video}" controls class="video-projeto" poster="./img/capa_video.jpg"></video>
+                    <video src="${projeto.video}" controls class="video-projeto" poster="../img/capa_video.jpg"></video>
                 </div>
                 `
             ).join("")
@@ -72,6 +72,7 @@ function exibeProjetos(){
         `
     
 }
+
 
 function buscarTecnologia() {
         busca.addEventListener(
@@ -141,6 +142,10 @@ for (let index = 0; index < array_videos.length; index++) {
     adicionarProjeto(index,array_videos[index].titulo,array_videos[index].video)
 }
 
+// contato.classList.remove("justify-content-start")
+
+// if(){
+// }
 
 buscarTecnologia()
 ativaBackgroundCabecalho();
@@ -149,23 +154,6 @@ exibeProjetos()
 exibeDescricao()
 
 
-// document.querySelectorAll(".next").forEach(
-//     btn=>{
-//         console.log(btn.id)
-        
-//         btn.addEventListener("click",()=>{
-//             if(btn.id === "btn_next_tecnologias"){
-//                 contador_tecnologias+=2
-//                 exibeTecnologias()
-//                 console.log(contador_tecnologias)
-//             }
-//             else
-//                 contador_projetos+=2
-//                 exibeProjetos()
-//                 console.log(contador_projetos)
-//         })
-//     } 
-// )
 
 
 
