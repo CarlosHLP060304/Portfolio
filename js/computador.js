@@ -1,13 +1,14 @@
 let dataEHoraAtual = new Date()
 let mesEscrito = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 let diaSemana = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"]
-let minutos_iniciais =  ["00","01","02","03","04","05","06","07","08","09"]
-let minutos =  minutos_iniciais.includes("0"+dataEHoraAtual.getMinutes().toString()) ? minutos_iniciais[dataEHoraAtual.getMinutes()] : dataEHoraAtual.getMinutes() 
-console.log(minutos)
+let horas_minutos_iniciais =  ["00","01","02","03","04","05","06","07","08","09"]
+let minutos =  horas_minutos_iniciais.includes("0"+dataEHoraAtual.getMinutes().toString()) ? horas_minutos_iniciais[dataEHoraAtual.getMinutes()] : dataEHoraAtual.getMinutes() 
+let horas =  horas_minutos_iniciais.includes("0"+dataEHoraAtual.getHours().toString()) ? horas_minutos_iniciais[dataEHoraAtual.getHours()] : dataEHoraAtual.getHours() 
+
 document.body.innerHTML = `
 <div class="data_horario text-light">   
 <div class = "horario">
-      ${dataEHoraAtual.getHours()} : ${minutos}   
+      ${horas} : ${minutos}   
 </div>
 <div class = "data">
       ${diaSemana[dataEHoraAtual.getDay()]},${dataEHoraAtual.getDate()} de ${mesEscrito[dataEHoraAtual.getMonth()]}
@@ -32,8 +33,8 @@ for (const evento in document) {
                             alt="imagem Carlos Henrique Lins Ponchirolli"
                             class="principal_sobre_mim_imagem_Carlos">
                             <p style="font-size:5rem">Carlos Henrique Lins Ponchirolli</p>
-                            <input type="text" class="mb-4 p-3" style="width:50rem;font-size:2rem" placeholder="Digite seu nome " id="nome">
-                            <button class="btn btn-secondary">Entrar no portfólio</button>
+                            <input type="text" class="mb-4 p-3" style="font-size:2rem" placeholder="Digite seu nome " id="nome">
+                            <button class="btn btn-primary botao">Ir para a página principal</button>
                             </div>
                             `
                             document.querySelector("button").addEventListener("click",()=>{

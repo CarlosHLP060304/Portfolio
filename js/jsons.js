@@ -78,22 +78,22 @@ export let array_videos = [
     {
         "id": 0,
         "titulo": "Site para Administrador de Eventos",
-        "video": "../videos/Site Administrador de Eventos ‐ Feito com o Clipchamp.mp4"
+        "video": "https://www.youtube.com/embed/4jkSOCz3zV4?si=OaTL8LUpNY1mVqjy"
     },
     {
         "id": 1,
         "titulo": "Montador de Currículos",
-        "video": "../videos/Projeto Montador de Currículos.mp4"
+        "video": "https://www.youtube.com/embed/YvEztePBR5M?si=h60qmHCQSgN8RO_6"
     },
     {
         "id": 2,
         "titulo": "Gerador de Senha",
-        "video": "../videos/gerador_senha.mp4"
+        "video": "https://www.youtube.com/embed/gc0DdryFE_8?si=7Nbn_BuJum0pmwE9"
     },
     {
         "id": 3,
-        "titulo": "Buscador de Endereços",
-        "video": "../videos/buscador_cep_java.mp4"
+        "titulo": "KraftHeinz Feedback",
+        "video": "https://www.youtube.com/embed/gONr7fmBcvA?si=ZwP3iAzv_YrjOJZ9"
     }
 ]
 

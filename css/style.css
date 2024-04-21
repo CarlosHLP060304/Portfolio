@@ -82,6 +82,8 @@ footer {
 .projeto {
     max-width: 35rem;
     padding: 1%;
+    display: flex;
+    justify-content: center;
 }
 
 .video-projeto {

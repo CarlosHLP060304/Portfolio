@@ -58,13 +58,13 @@ function exibeTecnologias(){
 
 function exibeProjetos(){
         projetos.innerHTML = `
+        
 
         ${
             projetos_json.map(
                 projeto => `
                 <div class="projeto col-6">
-                    <h3 class="text-light">${projeto.titulo}</h3>
-                    <video src="${projeto.video}" controls class="video-projeto" poster="../img/capa_video.jpg"></video>
+                <iframe style="height:70%;width:50%" src=${projeto.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 `
             ).join("")
