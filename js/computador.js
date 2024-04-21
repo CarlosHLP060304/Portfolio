@@ -4,6 +4,7 @@ let diaSemana = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta
 let horas_minutos_iniciais =  ["00","01","02","03","04","05","06","07","08","09"]
 let minutos =  horas_minutos_iniciais.includes("0"+dataEHoraAtual.getMinutes().toString()) ? horas_minutos_iniciais[dataEHoraAtual.getMinutes()] : dataEHoraAtual.getMinutes() 
 let horas =  horas_minutos_iniciais.includes("0"+dataEHoraAtual.getHours().toString()) ? horas_minutos_iniciais[dataEHoraAtual.getHours()] : dataEHoraAtual.getHours() 
+let segundos_restantes = 60000-dataEHoraAtual.getSeconds()*1000
 
 document.body.innerHTML = `
 <div class="data_horario text-light">   
@@ -16,6 +17,8 @@ document.body.innerHTML = `
 </div>
 
 `
+
+setInterval(()=>{window.location.href="../index.html"},segundos_restantes)
 
 let contador = 0
 
